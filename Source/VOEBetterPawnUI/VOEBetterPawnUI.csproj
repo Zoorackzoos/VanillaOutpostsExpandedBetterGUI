@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>VOEBetterPawnUI</AssemblyName>
+    <RootNamespace>VOEBetterPawnUI</RootNamespace>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- Drop the DLL straight into the mod's Assemblies folder -->
+    <OutputPath>..\..\1.6\Assemblies</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <!--
+    IMPORTANT: Set RIMWORLD_DIR to your RimWorld install path, e.g.:
+      Windows: C:\Program Files (x86)\Steam\steamapps\common\RimWorld
+      Mac:     /Users/YOU/Library/Application Support/Steam/steamapps/common/RimWorld
+    And set VEF_DIR to wherever VE Framework is installed, e.g.:
+      Windows: C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\3fix_this_id
+    Easiest fix: just copy the required DLLs next to this .csproj into a
+    "Libs" folder and reference them there instead (see commented block below).
+  -->
+
+  <ItemGroup>
+    <!-- RimWorld core assemblies -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RIMWORLD_DIR)\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(RIMWORLD_DIR)\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(RIMWORLD_DIR)\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Harmony (bundled with RimWorld since 1.1) -->
+    <Reference Include="0Harmony">
+      <HintPath>$(RIMWORLD_DIR)\RimWorldWin64_Data\Managed\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- VE Framework - Outposts assembly -->
+    <Reference Include="Outposts">
+      <HintPath>$(VEF_DIR)\1.6\Assemblies\Outposts.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!--
+    ALTERNATIVE: If env vars are annoying, copy these DLLs into a Libs\ folder
+    next to this .csproj and uncomment this block instead of the block above:
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>Libs\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>Libs\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>Libs\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>Libs\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Outposts">
+      <HintPath>Libs\Outposts.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  -->
+
+</Project>
