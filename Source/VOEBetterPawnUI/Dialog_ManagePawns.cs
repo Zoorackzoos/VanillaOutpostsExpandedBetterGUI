@@ -209,11 +209,23 @@ namespace VOEBetterPawnUI
 
             if (!anySelected) GUI.color = Color.gray;
             Rect confirmRect = new Rect(inRect.width - ButtonW, y, ButtonW, ButtonH);
+            /*
+            The type 'UnityEngine.TextAnchor' is defined in an assembly 
+            that is not referenced. You must add a reference to assembly 
+            'UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, 
+            PublicKeyToken=null'.
+             */
             if (Widgets.ButtonText(confirmRect, confirmLabel) && anySelected)
                 Confirm();
             GUI.color = Color.white;
 
             // Cancel
+            /*
+            The type 'UnityEngine.TextAnchor' is defined in an assembly
+             that is not referenced. You must add a reference to assembly 
+             'UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral,
+              PublicKeyToken=null'.
+             */
             if (Widgets.ButtonText(new Rect(0f, y, ButtonW, ButtonH), "CancelButton".Translate()))
                 Close();
 
@@ -221,11 +233,23 @@ namespace VOEBetterPawnUI
             Rect selAllRect  = new Rect(inRect.width / 2f - ButtonW - 4f, y, ButtonW, ButtonH);
             Rect selNoneRect = new Rect(inRect.width / 2f + 4f,           y, ButtonW, ButtonH);
 
+            /*
+            The type 'UnityEngine.TextAnchor' is defined in an assembly
+             that is not referenced. You must add a reference to assembly
+             'UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral,
+              PublicKeyToken=null'.
+             */
             if (Widgets.ButtonText(selAllRect, "SelectAll".Translate()))
             {
                 foreach (var r in rows.Where(r => r.enabled)) r.selected = true;
                 SoundDefOf.Tick_Low.PlayOneShotOnCamera();
             }
+            /*
+            The type 'UnityEngine.TextAnchor' is defined in an assembly
+             that is not referenced. You must add a reference to assembly
+             'UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral,
+              PublicKeyToken=null'.
+             */
             if (Widgets.ButtonText(selNoneRect, "DeselectAll".Translate()))
             {
                 foreach (var r in rows) r.selected = false;

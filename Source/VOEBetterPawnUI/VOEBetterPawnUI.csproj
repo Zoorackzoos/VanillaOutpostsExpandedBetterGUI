@@ -22,8 +22,8 @@
     "Libs" folder and reference them there instead (see commented block below).
   -->
   
+  <!--
   <ItemGroup>
-    <!-- RimWorld core assemblies -->
     <Reference Include="Assembly-CSharp">
       <HintPath>$(RIMWORLD_DIR)\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>false</Private>
@@ -41,23 +41,22 @@
       <Private>false</Private>
     </Reference>
 
-    <!-- Harmony (bundled with RimWorld since 1.1)... not really claude. whatever. -->
     <Reference Include="0Harmony">
       <HintPath>$(RIMWORLD_DIR)\RimWorldWin64_Data\Managed\0Harmony.dll</HintPath>
       <Private>false</Private>
     </Reference>
 
-    <!-- VE Framework - Outposts assembly -->
     <Reference Include="Outposts">
       <HintPath>$(VEF_DIR)\1.6\Assemblies\Outposts.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
+  -->
 
   <!--
     ALTERNATIVE: If env vars are annoying, copy these DLLs into a Libs\ folder
     next to this .csproj and uncomment this block instead of the block above:
-
+  -->
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>Libs\Assembly-CSharp.dll</HintPath>
@@ -84,6 +83,5 @@
       <Private>false</Private>
     </Reference>
   </ItemGroup>
-  -->
 
 </Project>
