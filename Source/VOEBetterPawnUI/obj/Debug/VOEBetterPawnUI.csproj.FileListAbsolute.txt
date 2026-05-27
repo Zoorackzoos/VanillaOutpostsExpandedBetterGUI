@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\code_stuff\0 personal\C#_code\rimworld\VanillaOutpostsExpandedBetterGUI\1.6\Assemblies\VOEBetterPawnUI.dll
+C:\Users\User\Desktop\code_stuff\0 personal\C#_code\rimworld\VanillaOutpostsExpandedBetterGUI\1.6\Assemblies\VOEBetterPawnUI.pdb
+C:\Users\User\Desktop\code_stuff\0 personal\C#_code\rimworld\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\code_stuff\0 personal\C#_code\rimworld\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\code_stuff\0 personal\C#_code\rimworld\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\code_stuff\0 personal\C#_code\rimworld\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.AssemblyInfo.cs
+C:\Users\User\Desktop\code_stuff\0 personal\C#_code\rimworld\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\code_stuff\0 personal\C#_code\rimworld\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.sourcelink.json
+C:\Users\User\Desktop\code_stuff\0 personal\C#_code\rimworld\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.dll
+C:\Users\User\Desktop\code_stuff\0 personal\C#_code\rimworld\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.pdb

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VOEBetterPawnUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9bc0790ed8cc334dc2250bb3e271f856a7fbe3f4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20b5a938806ed23257b305da3efa261e20a23741")]
 [assembly: System.Reflection.AssemblyProductAttribute("VOEBetterPawnUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VOEBetterPawnUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
