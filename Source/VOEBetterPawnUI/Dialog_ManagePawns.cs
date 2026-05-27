@@ -50,7 +50,6 @@ namespace VOEBetterPawnUI
         }
 
         public override Vector2 InitialSize => new Vector2(600f, Mathf.Min(700f, UI.screenHeight - 100f));
-        public override float   Margin      => 17f;
 
         // ── build row list ───────────────────────────────────────────────────
         private void BuildRows()
@@ -97,8 +96,8 @@ namespace VOEBetterPawnUI
 
             // Subtitle
             string subtitle = mode == Mode.Add
-                ? caravan.Name + "  →  " + (outpost.HasName ? outpost.Label : outpost.def.LabelCap)
-                : (outpost.HasName ? outpost.Label : outpost.def.LabelCap) + "  →  new caravan";
+                ? caravan.Name + "  →  " + (outpost.HasName ? outpost.Label : outpost.def.LabelCap.ToString())
+                : (outpost.HasName ? outpost.Label : outpost.def.LabelCap.ToString()) + "  →  new caravan";
             GUI.color = Color.gray;
             Widgets.Label(new Rect(0f, HeaderH, inRect.width, 22f), subtitle);
             GUI.color = Color.white;

@@ -21,7 +21,7 @@
     Easiest fix: just copy the required DLLs next to this .csproj into a
     "Libs" folder and reference them there instead (see commented block below).
   -->
-
+  
   <ItemGroup>
     <!-- RimWorld core assemblies -->
     <Reference Include="Assembly-CSharp">
@@ -36,8 +36,12 @@
       <HintPath>$(RIMWORLD_DIR)\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(RIMWORLD_DIR)\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
 
-    <!-- Harmony (bundled with RimWorld since 1.1) -->
+    <!-- Harmony (bundled with RimWorld since 1.1)... not really claude. whatever. -->
     <Reference Include="0Harmony">
       <HintPath>$(RIMWORLD_DIR)\RimWorldWin64_Data\Managed\0Harmony.dll</HintPath>
       <Private>false</Private>
@@ -65,6 +69,10 @@
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
       <HintPath>Libs\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>Libs\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="0Harmony">
