@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Vanilla Expanded Outposts - Better GUI</name>
-  <!--
-    packageId must be unique on the workshop.
-    Convention: AuthorName.ModNameNoSpaces
-    Change "YourName" to your Steam/workshop username.
-  -->
   <packageId>Zoorackzoos.Vanilla_Outposts_Expanded_Better_GUI</packageId>
   <author>Zoorackzoos</author>
   <!--
@@ -34,7 +29,7 @@ Requires: Vanilla Expanded Framework + Vanilla Outposts Expanded.
     </li>
     <!-- Vanilla Outposts Expanded -->
     <li>
-      <packageId>vanillaexpanded.voe</packageId>
+      <packageId>vanillaexpanded.outposts</packageId>
       <displayName>Vanilla Outposts Expanded</displayName>
       <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2688941031</steamWorkshopUrl>
     </li>
