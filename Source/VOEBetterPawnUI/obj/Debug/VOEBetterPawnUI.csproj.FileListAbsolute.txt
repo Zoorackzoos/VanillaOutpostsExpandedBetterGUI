@@ -8,3 +8,13 @@ C:\Users\User\Desktop\code_stuff\0 personal\C#_code\rimworld\VanillaOutpostsExpa
 C:\Users\User\Desktop\code_stuff\0 personal\C#_code\rimworld\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.sourcelink.json
 C:\Users\User\Desktop\code_stuff\0 personal\C#_code\rimworld\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.dll
 C:\Users\User\Desktop\code_stuff\0 personal\C#_code\rimworld\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.pdb
+D:\Program Files x86\Steam\steamapps\common\RimWorld\Mods\VanillaOutpostsExpandedBetterGUI\1.6\Assemblies\VOEBetterPawnUI.dll
+D:\Program Files x86\Steam\steamapps\common\RimWorld\Mods\VanillaOutpostsExpandedBetterGUI\1.6\Assemblies\VOEBetterPawnUI.pdb
+D:\Program Files x86\Steam\steamapps\common\RimWorld\Mods\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.csproj.AssemblyReference.cache
+D:\Program Files x86\Steam\steamapps\common\RimWorld\Mods\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Program Files x86\Steam\steamapps\common\RimWorld\Mods\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.AssemblyInfoInputs.cache
+D:\Program Files x86\Steam\steamapps\common\RimWorld\Mods\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.AssemblyInfo.cs
+D:\Program Files x86\Steam\steamapps\common\RimWorld\Mods\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.csproj.CoreCompileInputs.cache
+D:\Program Files x86\Steam\steamapps\common\RimWorld\Mods\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.sourcelink.json
+D:\Program Files x86\Steam\steamapps\common\RimWorld\Mods\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.dll
+D:\Program Files x86\Steam\steamapps\common\RimWorld\Mods\VanillaOutpostsExpandedBetterGUI\Source\VOEBetterPawnUI\obj\Debug\VOEBetterPawnUI.pdb
