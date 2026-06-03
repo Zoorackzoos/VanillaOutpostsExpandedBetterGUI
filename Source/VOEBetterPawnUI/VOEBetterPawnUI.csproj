@@ -6,8 +6,7 @@
     <RootNamespace>VOEBetterPawnUI</RootNamespace>
     <Nullable>disable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <!-- Drop the DLL straight into the mod's Assemblies folder -->
-    <OutputPath>..\..\1.6\Assemblies</OutputPath>
+    <OutputPath>D:\Program Files x86\Steam\steamapps\common\RimWorld\Mods\VanillaOutpostsExpandedBetterGUI\1.6\Assemblies</OutputPath>    
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
   </PropertyGroup>
