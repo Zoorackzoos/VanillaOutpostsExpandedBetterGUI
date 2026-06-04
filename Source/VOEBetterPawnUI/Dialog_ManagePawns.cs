@@ -212,20 +212,42 @@ namespace VOEBetterPawnUI
         }
 
         private void Confirm()
-        {
-            var selected = rows.Where(r => r.selected && r.enabled).Select(r => r.pawn).ToList();
-            if (!selected.Any()) return;
+		{
+    		var selected = rows.Where(r => r.selected && r.enabled).Select(r => r.pawn).ToList();
+    		if (!selected.Any()) return;
 
-            if (mode == Mode.Add)
-                foreach (var p in selected)
-                    outpost.AddPawn(p);
-            else
-                foreach (var p in selected)
-                    CaravanMaker.MakeCaravan(
-                        Gen.YieldSingle(outpost.RemovePawn(p)), p.Faction, outpost.Tile, true);
+    		if (mode == Mode.Add)
+    		{
+        		foreach (var p in selected)
+            	outpost.AddPawn(p);
+    		}
+    		else
+    		{
+        		if (caravan != null)
+        		{
+            		// Take Pawn: caravan is on the tile, add pawns directly to it
+            		foreach (var p in selected)
+            		{
+                		outpost.RemovePawn(p);
+                		caravan.AddPawnOrItem(p, true);
+            		}
+        		}
+        		else
+        		{
+            		// Remove Pawn: no caravan present, make a new one per pawn
+            		foreach (var p in selected)
+                		CaravanMaker.MakeCaravan
+						(
+                    		Gen.YieldSingle(outpost.RemovePawn(p)), 
+							p.Faction, 
+							outpost.Tile, 
+							true
+						);
+        		}
+    		}
 
-            Close();
-        }
+    		Close();
+		}
 
         private static string PawnSkillSummary(Pawn pawn)
         {
