@@ -8,12 +8,17 @@
   -->
   <url>https://github.com/Zoorackzoos/VanillaOutpostsExpandedBetterGUI</url>
   <description>
-Replaces the small dropdown menus for adding and removing pawns from
-Vanilla Outposts Expanded outposts with a scrollable trade-screen style
-dialog.
+Replaces the small dropdown menus for adding and removing pawns from 
+Vanilla Outposts Expanded outposts with a scrollable trade-screen 
+style GUI.
 
-Select multiple pawns at once, see their top skills at a glance, and
-use Select All / Deselect All for large colonies.
+Select multiple pawns at once, see their top skills at a glance, 
+and use Select All / Deselect All for large colonies.
+    
+This mod also fixes a layering bug with the current item trade GUI
+when you're trading items between a caravan and a outpost. 
+The bug itself was, if you had too many item rows, too much different stuff.
+Then the rows would go below into the "cancel", "reset" and "confirm" buttons.
 
 Requires: Vanilla Expanded Framework + Vanilla Outposts Expanded.
   </description>

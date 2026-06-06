@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Program Files x86\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\VOEBetterPawnUI.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\code_stuff\\0 personal\\C#_code\\rimworld\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\VOEBetterPawnUI.csproj",
       "projectName": "VOEBetterPawnUI",
-      "projectPath": "D:\\Program Files x86\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\VOEBetterPawnUI.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\code_stuff\\0 personal\\C#_code\\rimworld\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\VOEBetterPawnUI.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Program Files x86\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\code_stuff\\0 personal\\C#_code\\rimworld\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
