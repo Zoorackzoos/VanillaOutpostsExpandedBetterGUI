@@ -3,9 +3,6 @@
   <name>Vanilla Expanded Outposts - Better GUI</name>
   <packageId>Zoorackzoos.VanillaOutpostsExpandedBetterGUI</packageId>
   <author>Zoorackzoos</author>
-  <!--
-  TODO: make this URL go to the steam page, not the git repo
-  -->
   <url>https://github.com/Zoorackzoos/VanillaOutpostsExpandedBetterGUI</url>
   <description>
 Replaces the small dropdown menus for adding and removing pawns from 

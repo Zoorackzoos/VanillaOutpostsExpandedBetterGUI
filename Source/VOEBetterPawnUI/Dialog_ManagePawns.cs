@@ -225,18 +225,10 @@ namespace VOEBetterPawnUI
             {
                 if (caravan != null)
                 {
-                    // Take Pawn: caravan is on the tile, add pawns directly to it
                     foreach (var p in selected)
                     {
-                        Faction originalFaction = p.Faction;
                         outpost.RemovePawn(p);
-                        // KeepForever preserves the pawn without RimWorld reassigning its faction
-                        if (!Find.WorldPawns.Contains(p))
-                            Find.WorldPawns.PassToWorld(p, PawnDiscardDecideMode.KeepForever);
                         caravan.AddPawnOrItem(p, true);
-                        // Restore faction in case PassToWorld changed it
-                        if (p.Faction != originalFaction)
-                            p.SetFaction(originalFaction);
                     }
                 }
                 else

@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\code_stuff\\0 personal\\C#_code\\rimworld\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\VOEBetterPawnUI.csproj": {}
+    "C:\\Users\\User\\Desktop\\2 code_stuff\\0 personal\\C#_code\\rimworld\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\VOEBetterPawnUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\code_stuff\\0 personal\\C#_code\\rimworld\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\VOEBetterPawnUI.csproj": {
+    "C:\\Users\\User\\Desktop\\2 code_stuff\\0 personal\\C#_code\\rimworld\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\VOEBetterPawnUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\code_stuff\\0 personal\\C#_code\\rimworld\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\VOEBetterPawnUI.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\2 code_stuff\\0 personal\\C#_code\\rimworld\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\VOEBetterPawnUI.csproj",
         "projectName": "VOEBetterPawnUI",
-        "projectPath": "C:\\Users\\User\\Desktop\\code_stuff\\0 personal\\C#_code\\rimworld\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\VOEBetterPawnUI.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\2 code_stuff\\0 personal\\C#_code\\rimworld\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\VOEBetterPawnUI.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\code_stuff\\0 personal\\C#_code\\rimworld\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\2 code_stuff\\0 personal\\C#_code\\rimworld\\VanillaOutpostsExpandedBetterGUI\\Source\\VOEBetterPawnUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net472"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,6 +43,14 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201\\RuntimeIdentifierGraph.json"
         }
       }
