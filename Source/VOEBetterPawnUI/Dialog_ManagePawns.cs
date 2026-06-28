@@ -248,15 +248,17 @@ namespace VOEBetterPawnUI
                         Log.Message($"[VOEBetterPawnUI] BEFORE RemovePawn - {p.LabelShort} faction: {beforeFaction?.Name ?? "null"}");
 
                         outpost.RemovePawn(p);
-                        Log.Message($"[VOEBetterPawnUI] AFTER RemovePawn - {p.LabelShort} faction: {p.Faction?.Name ?? "null"}");
+                        Log.Message($"[VOEBetterPawnUI] AFTER RemovePawn - {p.LabelShort} faction: {p.Faction?.Name ?? "null"}, IsWorldPawn: {Find.WorldPawns.Contains(p)}");
 
-                        // Force the pawn's deferred tick state to register the holder change
-                        // immediately, instead of waiting for its next delayed tick interval
-                        // (which can act on stale data under variable/slowed tick rates).
-                        p.Notify_PassedToWorld();
+                        // Explicitly force world pawn registration if missing
+                        if (!Find.WorldPawns.Contains(p))
+                        {
+                            Find.WorldPawns.PassToWorld(p, PawnDiscardDecideMode.KeepForever);
+                            Log.Message($"[VOEBetterPawnUI] Forced PassToWorld - {p.LabelShort} faction: {p.Faction?.Name ?? "null"}, IsWorldPawn: {Find.WorldPawns.Contains(p)}");
+                        }
 
                         caravan.AddPawnOrItem(p, true);
-                        Log.Message($"[VOEBetterPawnUI] AFTER AddPawnOrItem - {p.LabelShort} faction: {p.Faction?.Name ?? "null"}");
+                        Log.Message($"[VOEBetterPawnUI] AFTER AddPawnOrItem - {p.LabelShort} faction: {p.Faction?.Name ?? "null"}, IsWorldPawn: {Find.WorldPawns.Contains(p)}");
 
                         if (p.Faction != beforeFaction)
                         {
