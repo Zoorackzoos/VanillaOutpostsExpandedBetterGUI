@@ -250,20 +250,22 @@ namespace VOEBetterPawnUI
                         outpost.RemovePawn(p);
                         Log.Message($"[VOEBetterPawnUI] AFTER RemovePawn - {p.LabelShort} faction: {p.Faction?.Name ?? "null"}, IsWorldPawn: {Find.WorldPawns.Contains(p)}");
 
-                        // Explicitly force world pawn registration if missing
                         if (!Find.WorldPawns.Contains(p))
                         {
                             Find.WorldPawns.PassToWorld(p, PawnDiscardDecideMode.KeepForever);
-                            Log.Message($"[VOEBetterPawnUI] Forced PassToWorld - {p.LabelShort} faction: {p.Faction?.Name ?? "null"}, IsWorldPawn: {Find.WorldPawns.Contains(p)}");
+
+                            // PassToWorld can reassign faction as a side effect - restore immediately
+                            if (p.Faction != beforeFaction)
+                            {
+                                Log.Warning($"[VOEBetterPawnUI] PassToWorld changed faction for {p.LabelShort}! Was: {beforeFaction?.Name ?? "null"}, Now: {p.Faction?.Name ?? "null"}. Restoring.");
+                                p.SetFactionDirect(beforeFaction);
+                            }
+
+                            Log.Message($"[VOEBetterPawnUI] After PassToWorld+restore - {p.LabelShort} faction: {p.Faction?.Name ?? "null"}, IsWorldPawn: {Find.WorldPawns.Contains(p)}");
                         }
 
                         caravan.AddPawnOrItem(p, true);
                         Log.Message($"[VOEBetterPawnUI] AFTER AddPawnOrItem - {p.LabelShort} faction: {p.Faction?.Name ?? "null"}, IsWorldPawn: {Find.WorldPawns.Contains(p)}");
-
-                        if (p.Faction != beforeFaction)
-                        {
-                            Log.Warning($"[VOEBetterPawnUI] FACTION CHANGED for {p.LabelShort}! Was: {beforeFaction?.Name ?? "null"}, Now: {p.Faction?.Name ?? "null"}");
-                        }
                     }
                 }
                 else
