@@ -216,35 +216,63 @@ namespace VOEBetterPawnUI
             var selected = rows.Where(r => r.selected && r.enabled).Select(r => r.pawn).ToList();
             if (!selected.Any()) return;
 
+            Log.Message($"[VOEBetterPawnUI] Confirm() called. Mode={mode}, selected count={selected.Count}");
+
             if (mode == Mode.Add)
             {
                 foreach (var p in selected)
+                {
+                    Log.Message($"[VOEBetterPawnUI] Adding pawn {p.LabelShort} (faction: {p.Faction?.Name ?? "null"}) to outpost.");
                     outpost.AddPawn(p);
+                }
             }
             else
             {
+                // Enforce the "one pawn rule": never let this action empty the outpost.
+                int remainingAfter = outpost.PawnCount - selected.Count;
+                if (remainingAfter < 1)
+                {
+                    Log.Message("[VOEBetterPawnUI] One-pawn-rule triggered, dropping last selected pawn.");
+                    Messages.Message(
+                        "At least one pawn must remain at the outpost.",
+                        MessageTypeDefOf.RejectInput, false);
+                    selected.RemoveAt(selected.Count - 1);
+                    if (!selected.Any()) return;
+                }
+
                 if (caravan != null)
                 {
-                    // Take Pawn: caravan is on the tile, add pawns directly to it
                     foreach (var p in selected)
                     {
-                        Faction originalFaction = p.Faction;
+                        Faction beforeFaction = p.Faction;
+                        Log.Message($"[VOEBetterPawnUI] BEFORE RemovePawn - {p.LabelShort} faction: {beforeFaction?.Name ?? "null"}");
+
                         outpost.RemovePawn(p);
-                        // KeepForever preserves the pawn without RimWorld reassigning its faction
-                        if (!Find.WorldPawns.Contains(p))
-                            Find.WorldPawns.PassToWorld(p, PawnDiscardDecideMode.KeepForever);
+                        Log.Message($"[VOEBetterPawnUI] AFTER RemovePawn - {p.LabelShort} faction: {p.Faction?.Name ?? "null"}");
+
+                        // Force the pawn's deferred tick state to register the holder change
+                        // immediately, instead of waiting for its next delayed tick interval
+                        // (which can act on stale data under variable/slowed tick rates).
+                        p.Notify_PassedToWorld();
+
                         caravan.AddPawnOrItem(p, true);
-                        // Restore faction in case PassToWorld changed it
-                        if (p.Faction != originalFaction)
-                            p.SetFaction(originalFaction);
+                        Log.Message($"[VOEBetterPawnUI] AFTER AddPawnOrItem - {p.LabelShort} faction: {p.Faction?.Name ?? "null"}");
+
+                        if (p.Faction != beforeFaction)
+                        {
+                            Log.Warning($"[VOEBetterPawnUI] FACTION CHANGED for {p.LabelShort}! Was: {beforeFaction?.Name ?? "null"}, Now: {p.Faction?.Name ?? "null"}");
+                        }
                     }
                 }
                 else
                 {
                     // Remove Pawn: no caravan present, make a new one per pawn
                     foreach (var p in selected)
+                    {
+                        Log.Message($"[VOEBetterPawnUI] Making new caravan for {p.LabelShort} (faction: {p.Faction?.Name ?? "null"})");
                         CaravanMaker.MakeCaravan(
                             Gen.YieldSingle(outpost.RemovePawn(p)), p.Faction, outpost.Tile, true);
+                    }
                 }
             }
 
